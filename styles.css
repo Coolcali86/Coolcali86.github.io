@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:wght@300&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    font-family:Ubuntu;
+    color: rgba(119, 119, 119);
+
+} 
+
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color:white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3 );
+}
+
+.main-nav li {
+    padding: 0 3%;
+}
+
+
+.nav a:hover {
+    background-color: rgba(255, 255 , 255, .3);
+}
+
+
+.main-header{
+    background-color: rgba(0,0,0,.6);
+    background-image: url(bmw.jpg);
+    background-blend-mode:multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+.main-heading {
+    text-align: center;
+    margin: 0;
+    font-size:4em;
+    font-family: Oswald;
+    font-weight: normal;
+    font-size: 8em;
+    color:rgb(22, 88, 142)
+    
+}
