@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:wght@300&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family:Ubuntu;
+    font-family:"Ubuntu";
     color: rgba(119, 119, 119);
 
 } 
@@ -48,12 +47,13 @@ html, body {
 
 .nav a:hover {
     background-color: rgba(255, 255 , 255, .3);
+    border-radius: 15%;
 }
 
 
 .main-header{
     background-color: rgba(0,0,0,.6);
-    background-image: url(bmw.jpg);
+    background-image: url(Images/bmw.jpg);
     background-blend-mode:multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -69,4 +69,65 @@ html, body {
     font-size: 8em;
     color:rgb(22, 88, 142)
     
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header {
+    font-family:"M PLUS 1 Code";
+   font-weight: normal;
+   color: #333;
+   text-align: center;
+   font-size: 2em;
+}
+
+.car-image {
+    float: left;
+    height: 300px;
+    width: 300px;
+    margin: 15px;
+    border-radius:50% ;
+}
+
+.main-footer {
+    background-color:rgba(41, 40, 40);
+    color: white;
+    padding: .25em 0;
+    
+}
+
+.main-footer-container {
+   display: flex;    
+   align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    height: 30px;
+    width: 30px
+}
+
+.footer-header {
+    font-family:"M PLUS 1 Code";
+   font-weight: normal;
+   color: #fff;
+   text-align: end;
+   font-size: 2em;
+
 }
