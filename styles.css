@@ -31,6 +31,7 @@ html, body {
     padding: .5em;
     color:white;
     text-decoration: none;
+    transition-duration: 0.4s;
 }
 
 .main-nav {
@@ -57,6 +58,30 @@ html, body {
     background-blend-mode:multiply;
     background-size: cover;
     padding-bottom: 30px;
+}
+
+.sources-link {
+    text-align: center;
+    
+    
+}
+
+.sources-link a {
+    color: rgba(255, 255 , 255, .3);
+    font-weight: lighter;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+.sources-link a:hover {
+    background-color:white;
+    color: black;
+
 }
 
 
@@ -97,6 +122,7 @@ html, body {
     border-radius:50% ;
 }
 
+
 .main-footer {
     background-color:rgba(41, 40, 40);
     color: white;
@@ -104,15 +130,24 @@ html, body {
     
 }
 
+.main-footer h4 {
+    font-weight: normal;
+    display: inline;
+    font-size: 1.5em;
+}
+
 .main-footer-container {
    display: flex;    
    align-items: center;
+   
 }
 
 .main-footer-container ul {
     flex-grow: 1;
     text-align: end;
 }
+
+
 
 .footer-nav li {
     padding: 0 .5em;
@@ -131,3 +166,120 @@ html, body {
    font-size: 2em;
 
 }
+
+.home-container {
+     margin: 3em;
+     font-size: 2em;
+}
+
+.home-about {
+    margin: 2em;
+    text-align: center;
+    
+}
+
+
+
+
+.home-section-nav li {
+    display: inline;
+    
+}
+
+.home-section-nav a {
+    display: inline-block;
+    padding: .5em;
+    color:#fefefe;
+    font-size: 2em;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.home-section-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.home-section-nav {
+    text-align: center;
+}
+
+.home-section-nav  a:hover {
+    background-color: rgba(255, 255 , 255, .3);
+}
+
+
+.bg-breh-2 {
+    background-color: rgba(0,0,0,.6);
+    background-image: url(Images/race_kar.jpg);
+    background-blend-mode:multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+
+.sources-list {
+    list-style-type: none;
+}
+
+.sources-list a {
+    display: inline-block;
+    padding: .5em;
+    color:333;
+    font-size: 1.5em;
+    text-decoration: none;
+
+}
+
+.home-bottom {
+    margin: 2em;
+    font-size: 2em;
+}
+
+.home-bottom button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    padding: 12px 28px;
+    transition-duration: .4s;
+}
+
+.home-bottom button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.home-bottom input {
+    width: 100px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  transition-duration: .5s;
+  transition: width 0.4s ease-in-out;
+}
+
+.home-bottom input {
+   
+  background-image: url("Images/dollar\ sign.png");
+  background-size: 16px 16px;
+ 
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+.home-bottom input[type=number]:hover {
+    border: 3px solid #555;
+    width: 50%;
+  }
+
+  .home-bottom input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .home-bottom input[type=number] {
+    -moz-appearance: textfield;
+  }
