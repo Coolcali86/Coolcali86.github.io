@@ -60,6 +60,17 @@ html, body {
     padding-bottom: 30px;
 }
 
+.gf-para {
+padding:100px;
+font-size: 40px;
+
+
+}
+
+.h5-idk {
+    font-size: 74px;
+}
+
 .sources-link {
     text-align: center;
     
@@ -91,8 +102,8 @@ html, body {
     font-size:4em;
     font-family: Oswald;
     font-weight: normal;
-    font-size: 8em;
-    color:rgb(22, 88, 142)
+    font-size: 64px;
+    color: red
     
 }
 
