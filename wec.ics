@@ -61,56 +61,56 @@ END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-7702777d-d2c7-46dd-b36e-9063a0e6a335
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Free Practice 1-
 DTSTART;TZID=Europe/Paris:20250510T140000
 DTEND;TZID=Europe/Paris:20250510T200000
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-e6808ff5-f320-44ac-b969-b9b86b4d5d97
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Free Practice 2 -
 DTSTART;TZID=Europe/Paris:20250509T154800
 DTEND;TZID=Europe/Paris:20250509T160000
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-8e02f314-1c9c-4580-9400-3bda6bb0c03a
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Free Practice 3 -
 DTSTART;TZID=Europe/Paris:20250509T152500
 DTEND;TZID=Europe/Paris:20250509T154000
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-52942152-86b9-4a1a-a33b-6d1a8e717f56
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Qualifying - LMGT3 -
 DTSTART;TZID=Europe/Paris:20250509T150300
 DTEND;TZID=Europe/Paris:20250509T151500
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-6663379f-0bf3-4749-bfa9-1ece811d56d5
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Hyperpole - LMGT3-
 DTSTART;TZID=Europe/Paris:20250509T144000
 DTEND;TZID=Europe/Paris:20250509T145500
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-e7308cb2-1e58-4bff-a089-39a9d4db9c86
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Qualifying - HYPERCAR-
 DTSTART;TZID=Europe/Paris:20250509T110000
 DTEND;TZID=Europe/Paris:20250509T120000
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-c7bee4d4-de30-472b-922b-689882668a53
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Hyperpole - HYPERCAR -
 DTSTART;TZID=Europe/Paris:20250508T165000
 DTEND;TZID=Europe/Paris:20250508T182000
 END:VEVENT
 BEGIN:VEVENT
 UID:sabre-vobject-82d9c0e2-5e3b-494b-98ff-eb3229cfce74
 DTSTAMP:20250419T151000Z
-SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 -
+SUMMARY:TotalEnergies 6 Heures de Spa-Francorchamps 2025 Race-
 DTSTART;TZID=Europe/Paris:20250508T114500
 DTEND;TZID=Europe/Paris:20250508T131500
 END:VEVENT
