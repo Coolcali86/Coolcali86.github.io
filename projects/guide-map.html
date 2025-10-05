@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="automatic class energy management system - smart energy conservation with computer vision">
+    <title>guide map - web project</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font for modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">← back to portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html#about" class="nav-link">about</a>
+                <a href="../index.html#projects" class="nav-link">projects</a>
+                <a href="../index.html#contact" class="nav-link">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content project-page">
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="section-container">
+                <div class="breadcrumb">
+                    <a href="index.html">home</a> > <a href="index.html#projects">projects</a> > <span>guide map</span>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <div class="project-header">
+
+                    <div class="title-with-image">
+                        <img src="../Images/guidemap-icon.png" alt="guidemap project" class="project-icon">
+                        <h1 class="project-main-title">guidemap.</h1>
+                    </div>
+                        <br>    <br>
+                    <p class="project-tagline">smart room occupancy detection and automated appliance control</p>
+                </div>
+
+                
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">status:</span>
+                        <span class="stat-value">completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">recognition:</span>
+                        <span class="stat-value">people liked it</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">people helped</span>
+                        <span class="stat-value">around 250~300</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Overview -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">project overview</h2>
+                <div class="project-content-grid">
+                    <div class="content-main">
+                        <p class="project-description">
+                            our school was hosting an interschool arts fest called Sahodhya where schools from the entire thrissur district will participate. i was tasked with building a digital map which would show locations of each stage/event across the school campus.
+                        </p>
+                        <p>
+                            the webapp helped multiple people navigate to their specific location and also helped them explore the school campus.
+                        </p>
+                    </div>
+                    <div class="content-sidebar">
+                        <div class="centered-img-container">
+                            <img class="guidemap-ss" src="../Images/guidemap.png" alt="guidemap screenshot">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">tech stack & tools</h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-category">
+
+                            <ul class="tech-list">
+                                <li><strong>leaflet</strong> – lightweight javascript library for interactive maps</li>
+                                <li><strong>openstreetmap</strong> – free and open source map tiles used as the base layer</li>
+                                <li><strong>git</strong> – version control system to track code changes and collaborate</li>
+                                <li><strong>github</strong> – used for project control and team collaboration</li>
+                                <li><strong>github pages</strong> – static site hosting the webapp</li>
+                                <li><strong>html</strong> – markup language used to structure web content</li>
+                                <li><strong>css</strong> – stylesheet language to design the look and feel of web pages</li>
+                            </ul>
+
+                    </div>
+                    
+
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">key features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3 class="feature-title">event locations</h3>
+                        <p class="feature-description">shows map markers for upcoming club or campus events, letting users quickly visualize where activities take place.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3 class="feature-title">your location</h3>
+                        <p class="feature-description">displays the user's current location on the map, helping them navigate and find nearby events and facilities.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3 class="feature-title">medical room finder</h3>
+                        <p class="feature-description">pinpoints the exact locations of medical rooms on campus, making it easy for users to locate help in emergencies.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h3 class="feature-title">essentials map</h3>
+                        <p class="feature-description">shows important amenities like washrooms and water points, so users can quickly find the facilities they need.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">challenges & solutions</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">implementing real-time location tracking of the user</h3>
+                        <p class="challenge-description"><strong>problem:</strong> needed to reliably display each user's live location on the map in real time across a wide range of devices with privacy and accuracy considerations.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> used the browser's geolocation api with frequent updates and integrated it into leaflet maps, plus deployed secure websockets to sync updates—making sure users always see their accurate live location and that permissions and privacy are respected.</p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">designing responsive interface for mobile use</h3>
+                        <p class="challenge-description"><strong>problem:</strong> almost all users would access the website on mobile devices during events.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented mobile-first design with tailwind css, focusing on touch-friendly interfaces and optimized loading speeds.</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section results-section">
+            <div class="section-container">
+                <h2 class="section-title">results & impact</h2>
+                <div class="results-content">
+                    <div class="results-main">
+                        <p>guide map helped make the art fest much more accessible to people who were not familiar with the school. it is being continously altered and updated by school students for ongoing events.</p>
+                        
+                        <div class="achievements">
+                            <h3>key metrics</h3>
+                            <ul>
+                                <li>200+ active members using the webapp</li>
+                                <li>event attendees reported being very useful</li>
+                                <li>reduced volunteer burden by 30-40%</li>
+                                <li>95% user satisfaction rating</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="metrics">
+                            <h3>technical performance</h3>
+                            <ul>
+                                <li>page load time: under 2 seconds</li>
+                                <li>99.9% uptime over 6 months</li>
+                                <li>mobile responsive design</li>
+                                <li>accessibility score: 94/100</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="future-plans">
+                            <h3>future enhancements</h3>
+                            <ul>
+                                <li>mobile app development</li>
+                                <li>integration with school systems</li>
+                                <li>dashboard to easily customise and tweak according to future needs</li>
+                                <li>improving mobile ux</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation to other projects -->
+        <section class="project-navigation">
+            <div class="section-container">
+                <div class="nav-projects">
+                    <a href="this-website.html" class="nav-project nav-prev">
+                        <span class="nav-label">← previous project</span>
+                        <span class="nav-title">this website</span>
+                    </a>
+                    <a href="carebot.html" class="nav-project nav-next">
+                        <span class="nav-label">next project →</span>
+                        <span class="nav-title">carebot</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+</html>

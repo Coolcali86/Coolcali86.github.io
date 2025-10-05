@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="autonomous line-following robot with computer vision and pid control">
+    <title>line following robot - robotics project</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font for modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">← back to portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html#about" class="nav-link">about</a>
+                <a href="../index.html#projects" class="nav-link">projects</a>
+                <a href="../index.html#contact" class="nav-link">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content project-page">
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="section-container">
+                <div class="breadcrumb">
+                    <a href="index.html">home</a> > <a href="index.html#projects">projects</a> > <span>line following robot</span>
+                </div>
+                
+                <div class="project-header">
+                    <span class="project-type-badge" style="background: #9CAF88;">robotics</span>
+                    <h1 class="project-main-title">autonomous line-following robot</h1>
+                    <p class="project-tagline">computer vision-based robot with pid control and obstacle avoidance</p>
+                </div>
+                
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">status</span>
+                        <span class="stat-value">completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">awards</span>
+                        <span class="stat-value">multiple robotics competitions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">accuracy</span>
+                        <span class="stat-value">98% line following</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">project overview</h2>
+                <div class="project-content-grid">
+                    <div class="content-main">
+                        <p class="project-description">
+                            classic robotics project but with a twist - instead of traditional ir sensors, i used computer vision for line detection. this approach allows for more complex path following and better handling of intersections and curves. the pid controller ensures smooth movement without oscillations.
+                        </p>
+                        <p>
+                            the robot can follow black lines on white surfaces, handle 90-degree turns, navigate intersections, and avoid obstacles while maintaining course. it's designed for robotics competitions but also serves as a learning platform for computer vision and control systems.
+                        </p>
+                    </div>
+                    <div class="content-sidebar">
+                        <div class="project-image-placeholder">
+                            <span>📸 robot following line photo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section class="project-section components-section">
+            <div class="section-container">
+                <h2 class="section-title">components & hardware</h2>
+                <div class="components-grid">
+                    <div class="component-category">
+                        <h3 class="component-category-title">main processing</h3>
+                        <ul class="component-list">
+                            <li><strong>raspberry pi 3b</strong> - computer vision processing and high-level control</li>
+                            <li><strong>arduino uno</strong> - motor control and sensor interfacing</li>
+                            <li><strong>microsd card (16gb)</strong> - operating system and image processing libraries</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">vision system</h3>
+                        <ul class="component-list">
+                            <li><strong>usb webcam (640x480)</strong> - line detection and path planning</li>
+                            <li><strong>camera mount</strong> - adjustable angle for optimal line visibility</li>
+                            <li><strong>led ring light</strong> - consistent illumination for vision processing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">locomotion</h3>
+                        <ul class="component-list">
+                            <li><strong>dc gear motors (6v, 200 rpm)</strong> - precise speed control</li>
+                            <li><strong>rotary encoders</strong> - wheel rotation feedback for accurate movement</li>
+                            <li><strong>motor driver shield (l293d)</strong> - bidirectional motor control</li>
+                            <li><strong>custom 3d printed chassis</strong> - lightweight and modular design</li>
+                            <li><strong>ball caster wheels</strong> - smooth turning and stability</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">sensors & safety</h3>
+                        <ul class="component-list">
+                            <li><strong>ultrasonic sensor (hc-sr04)</strong> - obstacle detection and avoidance</li>
+                            <li><strong>gyroscope (mpu6050)</strong> - orientation and stability control</li>
+                            <li><strong>battery voltage monitor</strong> - low battery protection</li>
+                            <li><strong>emergency stop button</strong> - manual safety override</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">power & interface</h3>
+                        <ul class="component-list">
+                            <li><strong>9v battery pack (2200mah)</strong> - main power supply</li>
+                            <li><strong>5v regulator</strong> - stable power for electronics</li>
+                            <li><strong>led status indicators</strong> - system state visualization</li>
+                            <li><strong>buzzer</strong> - audio feedback for events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">computer vision pipeline</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">image acquisition</h3>
+                        <p class="step-description">capture 640x480 frames at 30fps from usb camera, with automatic exposure and white balance adjustments for consistent image quality.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">preprocessing</h3>
+                        <p class="step-description">convert to hsv color space, apply gaussian blur to reduce noise, and use adaptive thresholding to handle varying lighting conditions.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">line detection</h3>
+                        <p class="step-description">use contour detection to find line boundaries, calculate line center using moments, and determine line angle for steering control.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">path planning</h3>
+                        <p class="step-description">calculate desired heading based on line position and angle, apply lookahead distance for smoother turns, and generate motor commands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control System -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">pid control system</h2>
+                <div class="control-system-grid">
+                    <div class="control-component">
+                        <h3 class="control-title">proportional (p) control</h3>
+                        <p class="control-description">responds to current error between desired and actual robot position relative to line. larger error = stronger correction.</p>
+                        <div class="control-params">
+                            <span class="param-label">kp value:</span>
+                            <span class="param-value">0.8</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-component">
+                        <h3 class="control-title">integral (i) control</h3>
+                        <p class="control-description">corrects for systematic bias and steady-state errors by accumulating error over time. helps eliminate offset.</p>
+                        <div class="control-params">
+                            <span class="param-label">ki value:</span>
+                            <span class="param-value">0.02</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-component">
+                        <h3 class="control-title">derivative (d) control</h3>
+                        <p class="control-description">predicts future error based on rate of change, reducing overshoot and oscillations for smoother movement.</p>
+                        <div class="control-params">
+                            <span class="param-label">kd value:</span>
+                            <span class="param-value">0.1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="control-component">
+                        <h3 class="control-title">tuning process</h3>
+                        <p class="control-description">used ziegler-nichols method as starting point, then fine-tuned through iterative testing on various track configurations.</p>
+                        <div class="control-params">
+                            <span class="param-label">update rate:</span>
+                            <span class="param-value">20 hz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Architecture -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">software architecture</h2>
+                <div class="software-grid">
+                    <div class="software-component">
+                        <h3 class="software-title">vision module (python)</h3>
+                        <ul class="software-features">
+                            <li>opencv for image processing</li>
+                            <li>numpy for numerical computations</li>
+                            <li>custom line detection algorithms</li>
+                            <li>real-time performance optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="software-component">
+                        <h3 class="software-title">control module (python)</h3>
+                        <ul class="software-features">
+                            <li>pid controller implementation</li>
+                            <li>motor speed calculations</li>
+                            <li>obstacle avoidance logic</li>
+                            <li>state machine for different modes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="software-component">
+                        <h3 class="software-title">arduino firmware (c++)</h3>
+                        <ul class="software-features">
+                            <li>motor driver control</li>
+                            <li>encoder reading and processing</li>
+                            <li>sensor data acquisition</li>
+                            <li>safety and emergency stop handling</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="software-component">
+                        <h3 class="software-title">communication layer</h3>
+                        <ul class="software-features">
+                            <li>serial communication protocol</li>
+                            <li>command parsing and validation</li>
+                            <li>telemetry data streaming</li>
+                            <li>error handling and recovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">challenges & solutions</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">real-time image processing for line detection</h3>
+                        <p class="challenge-description"><strong>problem:</strong> processing 30fps video stream while maintaining real-time control response was computationally challenging.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> optimized opencv pipeline by reducing image resolution for processing, implementing region of interest (roi) to focus on relevant areas, and using efficient contour detection algorithms.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">smooth pid control tuning</h3>
+                        <p class="challenge-description"><strong>problem:</strong> robot exhibited oscillations and overshoot when following curved sections of the track.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented systematic tuning approach starting with proportional gain, added derivative control to reduce overshoot, and fine-tuned using real track testing data.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">handling different lighting conditions</h3>
+                        <p class="challenge-description"><strong>problem:</strong> line detection accuracy dropped significantly under fluorescent lights or near windows with natural light.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented adaptive thresholding using gaussian weighted averages, added led ring light for consistent illumination, and calibrated hsv color ranges for different environments.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">obstacle avoidance while line following</h3>
+                        <p class="challenge-description"><strong>problem:</strong> integrating obstacle avoidance without losing track of the line required complex state management.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> developed finite state machine with states for normal following, obstacle detected, avoiding obstacle, and returning to line. used combination of ultrasonic sensor and vision to maintain line awareness during avoidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competition Results -->
+        <section class="project-section results-section">
+            <div class="section-container">
+                <h2 class="section-title">competition results & performance</h2>
+                <div class="results-content">
+                    <div class="results-main">
+                        <p>the line-following robot has competed in multiple robotics competitions, consistently placing in top 3 positions. its computer vision approach gives it advantages in complex track layouts.</p>
+                        
+                        <div class="achievements">
+                            <h3>competition achievements</h3>
+                            <ul>
+                                <li>1st place - university robotics challenge 2023</li>
+                                <li>2nd place - regional autonomous robot competition</li>
+                                <li>3rd place - state-level robotics olympiad</li>
+                                <li>technical innovation award for vision-based approach</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="metrics">
+                            <h3>performance metrics</h3>
+                            <ul>
+                                <li>line following accuracy: 98%</li>
+                                <li>maximum speed: 1.2 m/s</li>
+                                <li>minimum turning radius: 15 cm</li>
+                                <li>obstacle detection range: 30 cm</li>
+                                <li>battery life: 2.5 hours continuous operation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="technical-specs">
+                            <h3>track capabilities</h3>
+                            <ul>
+                                <li>90-degree turns at full speed</li>
+                                <li>s-curves and chicanes</li>
+                                <li>line width variations (1-3 cm)</li>
+                                <li>intersection navigation</li>
+                                <li>ramp climbing up to 15 degrees</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="results-sidebar">
+                        <div class="project-image-placeholder">
+                            <span>📸 competition action shot</span>
+                        </div>
+                        <div class="project-image-placeholder">
+                            <span>📸 award ceremony photo</span>
+                        </div>
+                        <div class="project-image-placeholder">
+                            <span>📸 technical demonstration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation to other projects -->
+        <section class="project-navigation">
+            <div class="section-container">
+                <div class="nav-projects">
+                    <a href="carebot.html" class="nav-project nav-prev">
+                        <span class="nav-label">← previous project</span>
+                        <span class="nav-title">carebot</span>
+                    </a>
+                    <a href="energy-management.html" class="nav-project nav-next">
+                        <span class="nav-label">next project →</span>
+                        <span class="nav-title">energy management</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+</html>

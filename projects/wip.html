@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sorry, this page is being built</title>
+  <!-- Google Fonts: serif for title, minimal font for footer/message -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary-color: #D4C5B0; /* soft beige */
+      --text-color: #3A342E; /* deep brown text */
+      --accent-color: #A8B5A0; /* muted sage */
+      --font-serif: 'Lora', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #FEFCF7; /* light cream background */
+      color: var(--text-color);
+      font-family: var(--font-sans);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: clamp(2rem, 8vw, 3rem);
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+      color: var(--text-color);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: clamp(1rem, 4vw, 1.2rem);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      color: var(--text-color);
+      opacity: 0.8;
+      animation: fadeIn 1s ease-in-out 0.3s;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      background-color: #A8B5A0;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    a.button:hover {
+      background-color: #8AA094;
+      transform: translateY(-2px);
+    }
+
+    /* Optional: floating personality emoji or subtle animation */
+    .emoji {
+      display: inline-block;
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>sorry, this page is being built</h1>
+  <p>we're working on it. please check back soon, or navigate to other parts of the site.</p>
+  <a href="../index.html" class="button">back to home</a>
+  <div class="emoji">⌛🛠️</div>
+</body>
+</html>

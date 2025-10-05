@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Critical mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Mobile-First Portfolio</title>
+    
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* MOBILE-FIRST CSS - Design for phones first! */
+        
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlights */
+        }
+
+        html {
+            font-size: 16px; /* NEVER go below 16px on mobile */
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%; /* Prevent iOS zoom */
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6; /* Perfect for mobile reading */
+            margin: 0;
+            padding: 0;
+            color: #2c2c2c;
+            font-size: 1rem; /* 16px - readable without zooming */
+        }
+
+        /* Mobile-optimized container */
+        .container {
+            width: 100%;
+            padding: 0 1rem; /* 16px breathing room */
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVE TYPOGRAPHY - scales beautifully */
+        h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(2rem, 8vw, 4rem); /* 32px to 64px */
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: clamp(1rem, 4vw, 2rem);
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: clamp(1.5rem, 6vw, 2.5rem); /* 24px to 40px */
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem; /* Always 16px minimum */
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            max-width: 65ch; /* Optimal reading width */
+        }
+
+        /* TOUCH-FRIENDLY BUTTONS - 44px minimum */
+        .btn {
+            display: inline-block;
+            min-height: 44px; /* Apple/Google recommendation */
+            min-width: 44px;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            background: #2c2c2c;
+            color: white;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            
+            /* Prevent text selection */
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* Instant touch feedback */
+        .btn:active {
+            transform: translateY(1px);
+            background: #1a1a1a;
+        }
+
+        /* MOBILE-FIRST LAYOUT */
+        .hero {
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .section {
+            padding: 3rem 1rem; /* Generous mobile spacing */
+        }
+
+        /* Projects grid - single column on mobile */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr; /* Stack on mobile */
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* TOUCH-OPTIMIZED CARDS */
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            
+            /* Ensure minimum touch target */
+            min-height: 44px;
+        }
+
+        /* Satisfying touch feedback */
+        .card:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* PERFORMANCE OPTIMIZATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* TABLET BREAKPOINT - enhance for larger screens */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                padding: 0 2rem;
+            }
+            
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .section {
+                padding: 5rem 2rem;
+            }
+            
+            .hero {
+                padding: 4rem 2rem;
+            }
+            
+            p {
+                font-size: 1.125rem; /* Slightly larger on tablets */
+            }
+        }
+
+        /* DESKTOP BREAKPOINT - full experience */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1200px;
+                padding: 0 2.5rem;
+            }
+            
+            .section {
+                padding: 8rem 2rem;
+            }
+            
+            .hero {
+                padding: 6rem 2rem;
+            }
+            
+            .card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            }
+        }
+
+        /* MOBILE NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            color: #2c2c2c;
+            text-decoration: none;
+            font-weight: 500;
+            min-height: 44px; /* Touch-friendly */
+            display: flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:active {
+            color: #6b46c1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky mobile navigation -->
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero section optimized for mobile -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Your Name</h1>
+            <p class="fade-in" style="font-size: 1.125rem; color: #666; margin-bottom: 2rem;">
+                Mobile-First Designer crafting beautiful experiences
+            </p>
+            <a href="#work" class="btn fade-in">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="fade-in">About</h2>
+            <p class="fade-in">
+                I specialize in creating digital experiences that work beautifully on mobile devices. 
+                Every design starts with mobile users in mind, ensuring fast load times, intuitive 
+                touch interactions, and readable typography.
+            </p>
+            <p class="fade-in">
+                From concept to launch, I focus on performance, accessibility, and user delight 
+                across all screen sizes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="section" id="work">
+        <div class="container">
+            <h2 class="fade-in">Selected Work</h2>
+            <div class="projects">
+                <a href="#" class="card fade-in">
+                    <h3>E-commerce Mobile App</h3>
+                    <p>Designed conversion-focused mobile shopping experience with one-tap checkout.</p>
+                    <span style="color: #6b46c1; font-weight: 500;">View Project →</span>
+                </a>
+                
+                <a href="#" class="card fade-in">
+                    <h3>Banking App Redesign</h3>
+                    <p>Simplified complex workflows into touch-friendly interfaces with enhanced security.</p>
+                    <span style="color: #6b46c1; font-weight: 500;">View Project →</span>
+                </a>
+                
+                <a href="#" class="card fade-in">
+                    <h3>Health Dashboard</h3>
+                    <p>Mobile-first data visualization with gesture-based interactions and real-time updates.</p>
+                    <span style="color: #6b46c1; font-weight: 500;">View Project →</span>
+                </a>
+                
+                <a href="#" class="card fade-in">
+                    <h3>Food Delivery Platform</h3>
+                    <p>Location-based ordering system optimized for speed and ease of use on mobile.</p>
+                    <span style="color: #6b46c1; font-weight: 500;">View Project →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="section" id="contact" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="fade-in" style="text-align: center;">Let's Work Together</h2>
+            <p class="fade-in" style="text-align: center; margin-bottom: 2rem;">
+                Ready to create something amazing for mobile users?
+            </p>
+            <div style="text-align: center;">
+                <a href="mailto:hello@yourname.com" class="btn fade-in">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // MOBILE-OPTIMIZED JAVASCRIPT
+        
+        // Remove 300ms tap delay on mobile
+        document.addEventListener('touchstart', () => {}, { passive: true });
+        
+        // Smooth scroll with mobile optimization
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    const navHeight = 60; // Account for fixed nav
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Handle viewport changes (iOS Safari fix)
+        const setVH = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setVH, 500);
+        });
+        
+        // Add touch feedback class
+        const style = document.createElement('style');
+        style.textContent = `
+            .touching {
+                opacity: 0.7 !important;
+                transform: scale(0.98) !important;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Apply touch feedback to interactive elements
+        document.querySelectorAll('a, button, .btn, .card').forEach(el => {
+            el.addEventListener('touchstart', () => {
+                el.classList.add('touching');
+            }, { passive: true });
+            
+            el.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    el.classList.remove('touching');
+                }, 150);
+            }, { passive: true });
+        });
+        
+        console.log('Mobile-optimized portfolio loaded! 📱✨');
+    </script>
+</body>
+</html>

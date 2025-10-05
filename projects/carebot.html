@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="automatic class energy management system - smart energy conservation with computer vision">
+    <title>carebot - robotics project</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font for modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">← back to portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html#about" class="nav-link">about</a>
+                <a href="../index.html#projects" class="nav-link">projects</a>
+                <a href="../index.html#contact" class="nav-link">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content project-page">
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="section-container">
+                <div class="breadcrumb">
+                    <a href="index.html">home</a> > <a href="index.html#projects">projects</a> > <span>carebot</span>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <div class="project-header">
+
+                    <div class="title-with-image">
+                        <img src="../Images/carebot-icon.png" alt="guidemap project" class="project-icon">
+                        <h1 class="project-main-title">carebot.</h1>
+                    </div>
+                        <br>    <br>
+                    <p class="project-tagline">personal care robot with face detection and vital signs monitoring</p>
+                </div>
+
+                
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">status:</span>
+                        <span class="stat-value">prototype</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">recognition:</span>
+                        <span class="stat-value">National Digital Fest & Global Indian Digital Fest Champion</span>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <br> 
+        <!-- Project Overview -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">project overview</h2>
+                <div class="project-content-grid">
+                    <div class="content-main">
+                        <p class="project-description">
+                            this project came from seeing my grandmother struggle with remembering to take medications. carebot is an autonomous robot that can navigate to patients, dispense the correct medication and water, and monitor vital signs. it uses facial recognition to identify different family members and keeps track of their medication schedules.
+
+                        </p>
+                        <p>
+                            the robot combines computer vision, autonomous navigation, and healthcare monitoring into a single platform. it's designed to be non-intrusive while ensuring patients receive their medication on time and their health is continuously monitored.
+                        </p>
+                    </div>
+                    <div class="content-sidebar">
+                        <div class="centered-img-container">
+                            <img class="carebot-ss" src="../Images/carebot.jpg" alt="carebot photo">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ <!-- Components Section -->
+        <section class="project-section components-section">
+            <div class="section-container">
+                <h2 class="section-title">components & hardware</h2>
+                <div class="components-grid">
+                    <div class="component-category">
+                        <h3 class="component-category-title">main computing</h3>
+                        <ul class="component-list">
+                            <li><strong>raspberry pi 4b</strong> - main computer for vision processing and decision making</li>
+                            <li><strong>arduino uno</strong> - sensor control and actuator management</li>
+                            <li><strong>microsd card (32gb)</strong> - operating system and data storage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">vision & sensing</h3>
+                        <ul class="component-list">
+                            <li><strong>usb webcam</strong> - for face & body detection and navigation</li>
+                            <li><strong>ultrasonic sensors (hc-sr04)</strong> - obstacle detection and navigation</li>
+                            <li><strong>temperature sensor (ds18b20)</strong> - body temperature monitoring</li>
+                            <li><strong>pulse sensor</strong> - heart rate monitoring</li>
+                            <li><strong>gsm module</strong> - to send information to caretaker </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">movement & control</h3>
+                        <ul class="component-list">
+                            <li><strong>dc motors with encoders</strong> - precise wheel movement</li>
+                            <li><strong>motor driver (l298n)</strong> - motor speed and direction control</li>
+                            <li><strong>servo motors (sg90)</strong> - pill dispenser mechanism</li>
+                            <li><strong>custom chasis made of multiwood</strong> - robot frame</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">user interface</h3>
+                        <ul class="component-list">
+                            <li><strong>led indicators</strong> - system status and emergency alerts</li>
+                            <li><strong>push buttons</strong> - to begin reading of heartrate and temperature</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">how it works</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-step">
+
+                        <h3 class="step-title">1. face recognition</h3>
+                        <p class="step-description">opencv-based face & body detection identifies family members and matches them to their medication schedules stored in a json database.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+
+                        <h3 class="step-title">2. autonomous navigation</h3>
+                        <p class="step-description">using the webcam, the robot navigates through the room to find the correct person for medication delivery.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+
+                        <h3 class="step-title">3. medication dispensing</h3>
+                        <p class="step-description">custom 3d-printed dispenser with servo-controlled mechanism releases the exact number of pills based on the prescription.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+
+                        <h3 class="step-title">4. vital signs monitoring</h3>
+                        <p class="step-description">temperature and pulse sensors take readings while dispensing medication, logging data for caretaker.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">challenges & solutions</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">accurate face detection in different lighting</h3>
+                        <p class="challenge-description"><strong>problem:</strong> opencv's default face detection struggled with varying indoor lighting conditions.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented body detection as well to help with face detection. </p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">precise pill dispensing mechanism</h3>
+                        <p class="challenge-description"><strong>problem:</strong> needed to dispense exact number of pills without jamming or miscounting.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> designed custom handbuilt rotating system with servo-platter.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">autonomous navigation in home environment</h3>
+                        <p class="challenge-description"><strong>problem:</strong> navigating around furniture and people in a dynamic home environment.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented basic slam using multiple ultrasonic sensors and created a simple occupancy grid map that updates in real-time.</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Results & Impact -->
+        <section class="project-section results-section">
+            <div class="section-container">
+                <h2 class="section-title">results & impact</h2>
+                <div class="results-content">
+                    <div class="results-main">
+                        <p>carebot has been successfull project having won multiple awards. it has also inspired a lot of other projects from other students in the school.</p>
+                        
+                        <div class="achievements">
+                            <h3>achievements</h3>
+                            <ul>
+                                <li>won Cybersquare Global Indian Digital Fest</li>
+                                <li>runner-up Cybersquare National Digital Fest</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="metrics">
+                            <h3>performance metrics</h3>
+                            <ul>
+                                <li>95% accuracy in face recognition</li>
+                                <li>99.8% medication dispensing accuracy</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="results-sidebar">
+
+                        <div class="centered-img-container">
+                            <img class="carebot-ss" src="../Images/award.jpg" alt="carebot photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+
+        <!-- Navigation to other projects -->
+        <section class="project-navigation">
+            <div class="section-container">
+                <div class="nav-projects">
+                    <a href="guide-map.html" class="nav-project nav-prev">
+                        <span class="nav-label">← previous project</span>
+                        <span class="nav-title">guide map</span>
+                    </a>
+                    <a href="energy-management.html" class="nav-project nav-next">
+                        <span class="nav-label">next project →</span>
+                        <span class="nav-title">acems</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="automatic class energy management system - smart energy conservation with computer vision">
+    <title>energy management system - project</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font for modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">← back to portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html#about" class="nav-link">about</a>
+                <a href="../index.html#projects" class="nav-link">projects</a>
+                <a href="../index.html#contact" class="nav-link">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content project-page">
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="section-container">
+                <div class="breadcrumb">
+                    <a href="index.html">home</a> > <a href="index.html#projects">projects</a> > <span>automatic class energy management system</span>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <div class="project-header">
+
+                    <div class="title-with-image">
+                        <img src="../Images/acems-icon.png" alt="guidemap project" class="project-icon">
+                        <h1 class="project-main-title">ACEMS.</h1>
+                    </div>
+                        <br>    <br>
+                    <p class="project-tagline">smart room occupancy detection and automated appliance control</p>
+                </div>
+
+                
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">status</span>
+                        <span class="stat-value">completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">recognition</span>
+                        <span class="stat-value">aim green innovators '23 top 100</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">energy saved</span>
+                        <span class="stat-value">estimated 30-40% per room</span>
+                    </div>
+                </div>
+        </section>
+        <!-- Project Overview -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">project overview</h2>
+                <div class="project-content-grid">
+                    <div class="content-main">
+                        <p class="project-description">
+                            noticed how much energy was wasted in empty classrooms with lights and fans running all day. this system uses computer vision to detect human presence and automatically controls room appliances. it can distinguish between actual people and objects, reducing false positives.
+
+                        </p>
+                       
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Components Section -->
+        <section class="project-section components-section">
+            <div class="section-container">
+                <h2 class="section-title">components & hardware</h2>
+                <div class="components-grid">
+                    <div class="component-category">
+                        <h3 class="component-category-title">main processing</h3>
+                        <ul class="component-list">
+                            <li><strong>raspberry pi 3b+</strong> - main computer for vision processing and decision making</li>
+                            <li><strong>arduino uno</strong> - relay control and sensor interfacing</li>
+                            <li><strong>microsd card (16gb)</strong> - operating system and data logging</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">detection sensors</h3>
+                        <ul class="component-list">
+                            <li><strong>usb camera (logitech c270)</strong> - computer vision based person detection</li>
+                            <li><strong>pir motion sensor (hc-sr501)</strong> - backup motion detection</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3 class="component-category-title">control & monitoring</h3>
+                        <ul class="component-list">
+                            <li><strong>4-channel relay module (5v)</strong> - high-power appliance switching</li>
+                            <li><strong>current sensors (acs712)</strong> - real-time power consumption monitoring</li>
+                            <li><strong>esp8266 wifi module</strong> - remote monitoring and control</li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">how it works</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">person detection</h3>
+                        <p class="step-description"> object detection algorithm identifies people in the camera feed, distinguishing them from furniture and other objects with 95% accuracy.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">occupancy tracking</h3>
+                        <p class="step-description">person counting algorithm tracks people entering and leaving through designated entry points, maintaining accurate room occupancy count.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">intelligent control</h3>
+                        <p class="step-description">based on occupancy data and time schedules, the system automatically turns appliances on/off with configurable delays to prevent false triggers.</p>
+                    </div>
+                    
+                    <div class="implementation-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">energy monitoring</h3>
+                        <p class="step-description">current sensors measure real-time power consumption and log data to calculate energy savings and generate reports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Architecture -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">software architecture</h2>
+                <div class="software-grid">
+                    <div class="software-component">
+                        <h3 class="software-title">computer vision module (python)</h3>
+                        <ul class="software-features">
+                            <li>opencv for image processing</li>
+                            <li>yolo v3 for object detection</li>
+                            <li>person tracking and counting algorithms</li>
+                            <li>adaptive lighting compensation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="software-component">
+                        <h3 class="software-title">control logic (arduino c++)</h3>
+                        <ul class="software-features">
+                            <li>relay control with safety timeouts</li>
+                            <li>sensor data acquisition</li>
+                            <li>real-time clock scheduling</li>
+                            <li>emergency manual override</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="software-component">
+                        <h3 class="software-title">communication layer</h3>
+                        <ul class="software-features">
+                            <li>serial communication between pi and arduino</li>
+                            <li>wifi connectivity for remote access</li>
+                            <li>mqtt protocol for iot integration</li>
+                            <li>data logging to csv files</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Challenges & Solutions -->
+        <section class="project-section">
+            <div class="section-container">
+                <h2 class="section-title">challenges & solutions</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">distinguishing humans from moving objects</h3>
+                        <p class="challenge-description"><strong>problem:</strong> initial motion detection triggered false positives from moving chairs, curtains, and shadows.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> implemented yolo v3 object detection specifically trained to recognize people, combined with size and movement pattern analysis to filter false positives.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">handling multiple people entering/leaving</h3>
+                        <p class="challenge-description"><strong>problem:</strong> accurately counting people when multiple individuals enter or exit simultaneously through the same door.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> developed tracking algorithm using centroid tracking and kalman filters to maintain individual person identities across frames.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">reliable relay control for high-power appliances</h3>
+                        <p class="challenge-description"><strong>problem:</strong> switching high-power fans and lights required proper electrical isolation and safety measures.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> used optoisolated relays rated for 230v ac loads, implemented proper grounding, and added surge protection to prevent damage.</p>
+                    </div>
+                    
+                    <div class="challenge-item">
+                        <h3 class="challenge-title">energy consumption tracking</h3>
+                        <p class="challenge-description"><strong>problem:</strong> measuring actual energy savings required accurate current sensing and data logging over time.</p>
+                        <p class="challenge-solution"><strong>solution:</strong> integrated acs712 current sensors with calibration routines and implemented data logging with sqlite database for long-term analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Results & Impact -->
+        <section class="project-section results-section">
+            <div class="section-container">
+                <h2 class="section-title">results & impact</h2>
+                <div class="results-content">
+                    <div class="results-main">
+                        <p>the system has helped our team learn and develop basic I/O,robotics,iot etc skills. It has also been acknoweledged.</p>
+                        
+                        <div class="achievements">
+                            <h3>key achievements</h3>
+                            <ul>
+                                <li> aim green innovators '23 top 30</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="metrics">
+                        
+                        <div class="metrics">
+                            <h3>performance metrics</h3>
+                            <ul>
+                                <li>95% accuracy in person detection</li>
+                                <li>30-40% reduction in energy consumption</li>
+                                <li>average response time: 5 seconds</li>
+                            </ul>
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div class="results-sidebar">
+                        
+                        <div class="project-image-placeholder">
+                            <div class="centered-img-container">
+                            <img class="acems-award-ss" src="../Images/acems-award.jpg" alt="carebot photo">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+
+        <!-- Navigation to other projects -->
+        <section class="project-navigation">
+            <div class="section-container">
+                <div class="nav-projects">
+                    <a href="carebot.html" class="nav-project nav-prev">
+                        <span class="nav-label">← previous project</span>
+                        <span class="nav-title">carebot`</span>
+                    </a>
+                    <a href="line-following-robot.html" class="nav-project nav-next">
+                        <span class="nav-label">next project →</span>
+                        <span class="nav-title">Line follower robot</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../app.js"></script>
+</body>
+</html>

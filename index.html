@@ -1,90 +1,219 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="student, maker & tech enthusiast - building cool things with robotics, arduino, raspberry pi, and web dev">
+    <title>student portfolio - robotics & tech</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font for modern, clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
-
-<head> 
-    <title> Home - Cali</title>
-    <link rel="stylesheet" href="styles.css">
- <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css">
 </head>
-   
 <body>
-
-
-  <!-- TOP SECTION -->
-  <header class="main-header">
-  <nav class="nav main-nav">
-    <ul>
-                 <li><a href="index.html">Home</a></li>
-                  <li><a href="G80.html">G80</a></li>  
-                  <li><a href="E92.html">E92</a></li>  
-                  <li><a href="E46.html">E46</a></li>   
-                  
-                  
-                </ul>
-
-                
-            </nav>
-         
-            <h1 class="main-heading ">how to get a gf tutorial <br> (works 100% tested+with proof 100% <br>(japanese secret method)</h1>
-            
-
-        </header>
-
-
-
-    
-   
-      
-      <uL class="gf-para">
-        
-
-      </uL>
-
-
-        
-        <h5 class="h5-idk"> if u still have no gf u mid human being haha L bozo go cry + ratio </h5>
-        
-       
-    
-
-   
-
-    
-    
-
-
-
-
-
-
-    <footer class="main-footer"> 
-       
-        <div class="container main-footer-container">
-            
-        <h3 class="footer-header"> M3</h3> <br>
-        
-           <ul class="nav footer-nav">
-            <li>
-                <h4><a  href="sources.html" target="_blank">Sources</a>
-            </li>
-             <li> 
-                 <a href="https://www.youtube.com/mercedesbenztv" target="_blank"> <img height = "32" width = "32"   src="https://icon-library.com/images/32x32-youtube-icon/32x32-youtube-icon-24.jpg"> </li></a>  
-            <li> 
-                <a href="https://global.toyota/en/" target="_blank"><img height = "32" width = "32" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png"> </li></a>
-           </ul>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">slm ✨</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">about</a>
+                <a href="#projects" class="nav-link">projects</a>
+                <a href="#contact" class="nav-link">contact</a>
+            </div>
         </div>
-    </footer>
- 
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                            hey, i'm 
+                            <span class="name-popover" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                                <span class="serif">salam</span>
+                                <span class="name-popover-card" role="tooltip" aria-hidden="true">
+                                <img src="/Images/me.JPG" alt="portrait of salam" class="name-popover-img">
+                                </span>
+                            </span>
+                            👋
+                            </div>
 
 
+                    <h1 class="hero-title">student, maker & tech enthusiast</h1>
+                    <p class="hero-subtitle">currently studying and building cool things with robotics, arduino, raspberry pi, and web dev. always learning, always tinkering.</p>
+                    <a href="#projects" class="hero-cta">see what i've built</a>
+                    <div class="hero-emojis">
+                        <span class="floating-emoji">🤖</span>
+                        <span class="floating-emoji">⚡</span>
+                        <span class="floating-emoji">🔧</span>
+                        <span class="floating-emoji">💻</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="section-container">
+                <h2 class="section-title">about me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>i'm a student who fell in love with making things that actually work. started with blinking leds on arduino, now i'm building robots and web apps.</p>
+                        <p>when i'm not buried in coursework, you'll find me in the lab working on my latest robotics project, debugging raspberry pi code, or learning a new web framework. i love the feeling of finally getting that servo motor to move exactly how you want it to.</p>
+                        <p>currently obsessed with: autonomous navigation, computer vision, and making technology more accessible through good design.</p>
+                    </div>
+                    <h2 class="section-title">stuff i do</h2>
+                    <div class="interests-grid">
+                        <div class="interest-item">robotics</div>
+                        <div class="interest-item">arduino projects</div>
+                        <div class="interest-item">raspberry pi</div>
+                        <div class="interest-item">web development</div>
+                        <div class="interest-item">automation</div>
+                        <div class="interest-item">3d printing</div>
+                        <div class="interest-item">computer vision</div>
+                        <div class="interest-item">iot projects</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="section-container">
+                <h2 class="section-title">things i've built</h2>
+                <div class="projects-grid">
+
+                    <a href="./projects/guide-map.html" class="project-card" style="--card-color: #6B5E4F">
+                        <div class="project-content">
+                            <span class="project-type">web development</span>
+                            <h3 class="project-title">guide map</h3>
+                            <p class="project-description">designed and built website for my university's robotics club. includes event management and member portal.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">leaflet</span>
+                                <span class="tech-tag">JS</span>
+                                <span class="tech-tag">html & css</span>
+                            </div>
+                            <div class="project-impact">helped around 250~300</div>
+                        </div>
+                    </a>
+
+                    <a href="./projects/carebot.html" class="project-card" style="--card-color: #9CAF88">
+                        <div class="project-content">
+                            <span class="project-type">robotics</span>
+                            <h3 class="project-title">carebot</h3>
+                            <p class="project-description">built a personal care robot which can dispense water and pills to a patient. it moves to them by detecting their face and can also read their temperatures and heart rate.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">raspberry pi</span>
+                                <span class="tech-tag">opencv</span>
+                                <span class="tech-tag">arduino</span>
+                                <span class="tech-tag">python</span>
+                            </div>
+                            <div class="project-impact">daily use at home & hospitals<br>won multiple national level awards</div>
+                        </div>
+                    </a>
+
+                    <a href="projects/energy-management.html" class="project-card" style="--card-color: #A0956B">
+                        <div class="project-content">
+                            <span class="project-type">energy conservation</span>
+                            <h3 class="project-title">automatic class energy management system</h3>
+                            <p class="project-description">detects presence of people in a (class)room and turns off/on appliances such as lights and fans.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">arduino uno</span>
+                                <span class="tech-tag">opencv</span>
+                                <span class="tech-tag">raspberry pi</span>
+                            </div>
+                            <div class="project-impact">aim green innovators '23 top 100</div>
+                        </div>
+                    </a>
+
+                    <a href="projects/wip.html" class="project-card" style="--card-color: #9CAF88">
+                        <div class="project-content">
+                            <span class="project-type">robotics</span>
+                            <h3 class="project-title">autonomous line-following robot</h3>
+                            <p class="project-description">built a robot that can follow lines using computer vision and arduino. implemented pid control for smooth movement and obstacle avoidance.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">arduino</span>
+                                <span class="tech-tag">opencv</span>
+                                <span class="tech-tag">python</span>
+                                <span class="tech-tag">3d printing</span>
+                            </div>
+                            <div class="project-impact">multiple awards</div>
+                        </div>
+                    </a>
+
+                    <a href="projects/wip.html" class="project-card" style="--card-color: #8FA68C">
+                        <div class="project-content">
+                            <span class="project-type">work in progress</span>
+                            <h3 class="project-title">this website.</h3>
+                            <p class="project-description">yes this website is actively being developed upon as a side passion project and it can act as a portfolio if needed.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">css</span>
+                                <span class="tech-tag">js</span>
+                            </div>
+                            <div class="project-impact"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="section-container">
+                <h2 class="section-title">let's build something together</h2>
+                <div class="contact-content">
+                    <p class="contact-intro">working on a cool project? need help with robotics or web dev? just want to chat about the latest arduino release? hit me up!</p>
+                    
+                        <div class="contact-methods inline-contacts">
+                        <a href="mailto:salambinsakeer@gmail.com" class="contact-link contact-email">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">salambinsakeer@gmail.com</span>
+                        </a>
+
+                        <span class="contact-sep">•</span>
+
+                        <a href="tel:+919876543210" class="contact-link contact-phone">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+91 98765 43210</span>
+                        </a>
+                        </div>
+
+
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                            <span class="social-icon">🔧</span>
+                            <span class="social-text">github projects</span>
+                        </a>
+                        <a href="https://instagram.com/yourmaker" target="_blank" class="social-link">
+                            <span class="social-icon">📸</span>
+                            <span class="social-text">build photos</span>
+                        </a>
+
+                        <a href="https://youtube.com/yourchannel" target="_blank" class="social-link">
+                            <span class="social-icon">📹</span>
+                            <span class="social-text">project videos</span>
+                        </a>
+                    </div>
+                    
+                    <div class="availability">
+                        <span class="status-dot"></span>
+                        always excited to collaborate on interesting projects
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
 </body>
-
-
-
-
-
-</html> 
+</html>
